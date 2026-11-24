@@ -55,28 +55,3 @@ https://github.com/commoncriteria/virtualization/archive/refs/heads/master.zip
 * 个别站点（如 VMware、Oracle）可能有反爬或重定向，下载结果可能为 HTML 索引页而非原始 PDF，属正常现象。
 * `artifacts/_status.tsv` 记录每个链接的下载状态，便于排查。
 * 所有资源版权归原作者/机构所有，本仓库仅作整理与下载工具，请遵守相关使用条款。
-  EOF
-
-echo "[*] 生成 LICENSE..."
-cat > LICENSE <<'EOF'
-MIT License
-
-Copyright (c) 2026 cc-virt-refs contributors
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
