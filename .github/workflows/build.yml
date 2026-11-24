@@ -1,0 +1,46 @@
+name: Build CC Virt Refs ZIP
+
+on:
+workflow_dispatch:
+inputs:
+tag:
+description: 'Release tag (optional). Example: build-20261124'
+required: false
+default: ''
+
+permissions:
+contents: write
+
+jobs:
+build:
+runs-on: ubuntu-latest
+steps:
+- name: Checkout
+uses: actions/checkout@v4
+
+```
+  - name: Set up Python
+    uses: actions/setup-python@v5
+    with:
+      python-version: '3.12'
+
+  - name: Download all resources and create ZIP
+    run: python download.py
+
+  - name: Upload ZIP as Artifact
+    uses: actions/upload-artifact@v4
+    with:
+      name: cc-virt-refs-zip
+      path: cc-virt-refs.zip
+      if-no-files-found: error
+
+  - name: Create GitHub Release with ZIP
+    if: ${{ github.event.inputs.tag != '' }}
+    env:
+      GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    run: |
+      gh release create "${{ github.event.inputs.tag }}" cc-virt-refs.zip \
+        --title "CC Virtualization Resources ${{ github.event.inputs.tag }}" \
+        --notes "Automated build from commit ${{ github.sha }}"
+```
+

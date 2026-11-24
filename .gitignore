@@ -1,0 +1,15 @@
+
+# 下载产物
+
+artifacts/
+cc-virt-refs.zip
+
+# Python
+
+**pycache**/
+*.pyc
+
+# 系统文件
+
+.DS_Store
+Thumbs.db
